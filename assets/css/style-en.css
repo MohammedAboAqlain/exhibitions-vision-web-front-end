@@ -1,0 +1,273 @@
+html {
+    direction: ltr;
+    scroll-behavior: smooth !important;
+    transition: all 1s ease-out;
+}
+
+* {
+    transition: all .3s ease-in 0s;
+}
+
+*.text-right,
+*.text-md-right {
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+*.text-left {
+    text-align: right !important;
+}
+
+body {
+    position: relative;
+}
+
+header nav {
+    background-color: rgba(230, 230, 230, .85);
+}
+
+a.nav-link {
+    margin-inline-end: 25px;
+}
+
+.active a.nav-link {
+    margin: 0px 15px;
+}
+
+a.nav-link.lang-switch {
+    background-color: #bf1e2d;
+    color: white !important;
+}
+
+.active {
+    background-color: #E7E7E7;
+    border-radius: 50px;
+}
+
+.active a.nav-link {
+    color: #bf1e2d !important;
+}
+
+a.nav-link:hover {
+    color: #bf1e2d !important;
+}
+
+a.nav-link.lang-switch:hover {
+    color: white !important;
+}
+
+.bg-move {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/hAaTm7J.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: unset;
+    /* animation-name: clouds;
+    animation-duration: 20s; */
+    animation: clouds 40s infinite linear;
+    mix-blend-mode: darken;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    right: 0;
+}
+
+.double-angle-down {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .251);
+    padding: 7px;
+    font-size: 25pt;
+    left: 50%;
+    bottom: 100px;
+    width: 56px;
+    height: 56px;
+    z-index: 23400
+}
+
+@keyframes clouds {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1024px 0;
+    }
+}
+
+#about {
+    background-image: url(../img/bg-about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about-tools {
+    background-image: url(../img/bg-about-tools.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+#about-tools button:hover {
+    background-color: #1f1f1f !important;
+    color: white !important;
+    border: 0.5px solid white;
+}
+
+#services .row .col-12.col-md-6.col-lg-4:hover i {
+    transform: scale(1.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.rounded-circle.p-3.mx-auto i:hover {
+    cursor: pointer;
+}
+
+#projects {
+    background-image: url(../img/project-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#clients {
+    background-color: #f6f6f6;
+}
+
+.img-container:hover img {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+}
+
+#img-gallery .img-container h4 {
+    cursor: pointer;
+}
+
+#img-gallery .img-container:hover img {
+    filter: brightness(0.4);
+}
+
+#img-gallery .img-container.more {
+    background-color: #1f1f1f;
+}
+
+#img-gallery .img-container.more:hover {
+    cursor: pointer;
+    filter: brightness(0.4);
+}
+
+#img-gallery .img-container.more:hover h6 {
+    transform: scale(1.3);
+    transition: all 0.4s ease-in-out;
+}
+
+#img-gallery .img-container h4 {
+    display: none;
+}
+
+#img-gallery .img-container:hover h4 {
+    display: block;
+}
+
+.img-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.img-container h5 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gallery .gallery-text {
+    background-color: rgba(230, 230, 230, 0.5);
+}
+
+#videos {
+    background: url(../img/bg-video.jpg);
+}
+
+footer {
+    background-color: #1f1f1f;
+}
+
+footer .form-row input,
+footer .form-row textarea {
+    background-color: transparent;
+}
+
+#first-rotation {
+    animation: mymove 6s infinite;
+    transition: all 2s ease;
+}
+
+#second-rotation {
+    animation: mymove2 6s infinite;
+    transition: all 2s ease;
+}
+
+@keyframes mymove {
+    0% {
+        display: block;
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+    15% {
+        transform: rotateX(-30deg);
+    }
+    35% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+    40% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(-180deg);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes mymove2 {
+    0% {
+        display: none;
+    }
+    50% {
+        display: block;
+        opacity: 1;
+    }
+    65% {
+        transform: rotateX(-30deg);
+    }
+    85% {
+        transform: rotateX(110deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(180deg);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width:540px) {
+    #about-tools h2 {
+        font-size: large;
+        margin: 20px !important;
+    }
+    #about-tools button {
+        padding: 10px 20px !important;
+        margin: 10px !important;
+    }
+}
